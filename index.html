@@ -2,18 +2,78 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>JavaScript Basics – Challenge</title>
-        <link href="style.css" rel="stylesheet"> 
-    </head>
-    <body>
-        <div class="header">
-            <h1>Your Story</h1>
-        </div>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Exercise 2</title>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
         
-        <section class="floating-box">
-            <main></main>    
-        </section>
-     
-        <script src="story.js"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div id="welcome-form" class="flex-display box-margin center container"> <!--Ask for user name-->
+                <h2>Hello, stranger!</h2>
+                <h2>What is your name?</h2> 
+                <input type="text" placeholder="My name is..." id="input-name" class="input" >
+                <button id="name-button" class="button">Answer</button>
+            </div>
+
+            <div id="input-form" class="flex-display box-margin container"> <!--User input information-->
+                <h3 id="welcome-title" class="center">Welcome, <span class="user-name"></span>!</h3>
+                <div class="odd-color">
+                    <p id="first-question">Okay, <span class="user-name"></span>, I would like to ask you some questions.</p>
+                    <p>First, tell me, what place would you like to visit?</p>
+                    <input type="text" placeholder="I would like to vistit..." id="input-place" class="input" >
+                </div>
+
+                <div class="odd-color">
+                    <p>What animal scares or disgusts you?</p>
+                    <input type="text" placeholder="I mostly dislike..." id="input-animal" class="input" >
+                </div>
+
+                <div class="odd-color">
+                <p>Sorry to bring that topic up.</p>
+                <p>Now, <span class="user-name"></span>, tell me a famous person you like or that comes to your mind right now.</p>
+                <input type="text" placeholder="Let me think..." id="input-famous-person" class="input" >
+                </div>
+
+                <div class="odd-color">
+                <p>Tell me the name of an object that is close to you right now or that comes to your mind.</p>
+                <input type="text" placeholder="Let me see..." id="input-magical-object" class="input" >
+                </div>
+
+                <div class="odd-color">
+                <p>Let's move to more pleasant things, shall we, <span class="user-name"></span>. What is your favorite food?</p>
+                <input type="text" placeholder="My favorite food is..." id="input-food" class="input" >
+                </div>
+
+                <div class="odd-color">
+                <p>And what is your favorite drink?</p>
+                <input type="text" placeholder="My favorite drink is..." id="input-drink" class="input" >
+                </div>
+
+                <button id="submit" class="button">Submit</button>
+            </div> 
+
+            
+            <div id="story" class="box-margin container">  <!--Story display-->
+                <h2 class="center">Your Story, <span class="user-name"></span></h2>
+                <div>
+                    <p>Upon visiting <span class="place"></span>, you were attacked by a giant, rabid, mutant <span class="animal"></span>.</p>
+                    <p>Suddenly, <span class="famous-person"></span> came to your aid and gave you a magical <span class="magical-object"></span>. With it, then, you transformed the evil <span class="animal"></span> into <span class="food"></span> which you and <span class="famous-person"></span> savored savagely along with lots of <span class="drink"></span>!</p>
+                    <p>You, <span class="user-name"></span>, are a <strong>Hero</strong>!</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; Ultra copyrighted to <strong>The Llama&trade;</strong> - 2020 </p>
+            <p><i>Disclaimer - If you copy this, be prepared to face a horde of llama llawyers.<br><strong>You have been warned!</strong></i></p>
+        </footer>
+
+        
+        <script src="jquery-3.4.1.min.js"></script>
+        <script src="app.js"></script>
     </body>
+
 </html>
